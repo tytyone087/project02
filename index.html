@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>  서울역사편찬원   </title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='Title' content='서울역사편찬원'>
+<meta name='Subject' content='서울역사편찬원 클론코딩'>
+<meta name='Keywords' content='역사, 서울역사편찬원'>
+<meta name='Author' content='seoyoung'>
+<meta name='Publisher' content='seoyoung'>
+<meta name='Description' content='서울역사편찬원 클론코딩'>
+<meta name='Author-Date' content='20240219'>
+
+<!-- 접근성 텍스트(skip) 숨김 -->
+<style>#skip{overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}</style>
+
+<!-- 폰트어썸 -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<!-- 구글폰트 아이콘 -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+
+<!-- 네이버폰트 -->
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+
+<!-- CSS 리셋 -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css'>
+
+<!-- 제이쿼리 3.7 CDN -->
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+
+<!-- 로컬 CSS -->
+<link rel='stylesheet' href='./css/style.css'/>
+
+<!-- 로컬 js -->
+<script src='./js/script.js' defer></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+</head>
+<body>
+<!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
+
+<ul id='skip'>
+   <li><a href='#header'>헤더 바로가기</a></li>
+   <li><a href='#nav'>메뉴 바로가기</a></li>
+   <li><a href='#content'>내용 바로가기</a></li>
+</ul>
+
+<div id="wrap">
+    <div class="popup_bg"></div>
+    <header id="header">
+        <div class="header_Top">
+            <div class="header_top_wrap">
+                <div class="header_top_holder">
+                    <p class="header_top_logo"><a href="#" >서울특별시</a></p>
+                    <div class="header_top_news">
+                        <a href="#" class="header_newsIcon">서울소식</a>
+                        <a href="#" class="header_news">(지방시대) 동행과 매력의 균형도시 서울을 소개합니다. </a>
+                    </div>
+                    <div class="header_top_menu">
+                        <ul>
+                            <li><a href="#">서울소식</a></li>
+                            <li><a href="#">응답소</a></li>
+                            <li><a href="#">정보공개</a></li>
+                            <li><a href="#">분야별정보</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_wrap inner_wrap">
+            <h1>
+                <a href="#"><img src="./img/icon/seoul-logo-mobile.png" alt="모바일 서울시 휘장"></a>
+                <a href="#"><img src="./img/icon/logo.svg" alt="서울역사편찬원 로고"></a>
+            </h1>
+            <a href="#gnb" class="menu mobile">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </a>
+            <nav id="gnb">    
+                <ul class="depth1">
+                    <li class="sub1">
+                        <a>도서
+                            <i class="plus mobile"></i>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">시리즈</a></li>
+                            <li><a href="#">기획</a></li>
+                            <li><a href="#">단행본</a></li>
+                            <li><a href="#">학술지</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub2">
+                        <a>교육
+                            <i class="plus mobile"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">강좌</a></li>
+                            <li><a href="#">답사</a></li>
+                            <li><a href="#">온라인 특강</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub3">
+                        <a>학술
+                            <i class="plus mobile"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">공모</a></li>
+                            <li><a href="#">논문</a></li>
+                            <li><a href="#">학술대회</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub4">
+                        <a>서울역사도서관
+                            <i class="plus mobile"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">이용 안내</a></li>
+                            <li><a href="#">소장 자료 검색</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub5"><a href="#">서울史 DB <img src="./img/icon/icon_link.svg" alt="서울史 DB 바로가기"></a></li>
+                    <li class="sub6">
+                        <a>편찬원 소개
+                            <i class="plus mobile"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">기관 소개</a></li>
+                            <li><a href="#">편찬원 이야기</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="searchBtn"><img src="./img/icon/icon_search_black.svg" alt="검색"></a>
+            <div class="header_search_layer">
+                <h2>
+                    <img src="./img/icon/logo.svg" alt="서울역사편찬원 로고">
+                    <button class="search_closeBtn">
+                        <img src="./img/icon/close.svg" alt="닫기">
+                    </button>
+                </h2>
+                <div class="search_bar">
+                    <label for="comsw"></label>
+                    <input type="search" id="comsw" name="comsw" placeholder="검색어를 입력해주세요">
+                    <button type="button"><img src="./img/icon/icon_search_black.svg" alt="검색"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section id="section01">
+            <div class="swiper section01_swiper_Frame">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(./img/sliderImg/bannerImg1_1.do); " >
+                        <div class="inner_wrap">
+                            <div>
+                                <p>2024년 상반기 서울역사강좌</p>
+                                <h3>&lsquo;돌에 새긴 서울사&rsquo;를 시작합니다</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(./img/sliderImg/bannerImg1_2);">
+                        <div class="inner_wrap">
+                            <div>
+                                <p>서울 역사를 수집&middot;조사&middot;연구&middot;편찬하는</p>
+                                <h3>서울역사편찬원이 함께합니다.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(./img/sliderImg/bannerImg1_3);">
+                        <div class="inner_wrap">
+                            <div>
+                                <p>서울 역사를 수집&middot;조사&middot;연구&middot;편찬하는</p>
+                                <h3>서울역사편찬원이 함께합니다.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller_wrap">
+                    <div>
+                        <div class="swiper_nextBtn"></div>
+                        <div class="swiper_prevBtn"></div>
+                        <div class="swiper_pagination"></div>
+                        <button class="swiper_pauseBtn"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="main_quick_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico1.svg" alt=""></em>
+                            <span>전자책</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico2.svg" alt=""></em>
+                            <span>강좌 신청</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico3.svg" alt=""></em>
+                            <span>답사 신청</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico4.svg" alt=""></em>
+                            <span>학술지<br>논문투고</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico6.svg" alt=""></em>
+                            <span>서울史<br>DB 검색</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em><img src="./img/icon/quick_menu_ico7.png" alt=""></em>
+                            <span>ENGLISH</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section id="section02">
+            <div class="inner_wrap">
+                <h2 class="sub_title">신간소개
+                    <a href="#" class="more_view">전체보기</a>
+                </h2>
+                <div class="bookIntroduce">
+                    <div class="swiper book_wrap">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book1.do" alt="서울 동의 역사 서초구">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울 동의 역사 서초구</em>
+                                    <span >은태정 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book2.do" alt="20.국역 경덕궁수리소의 궤">
+                                </a>
+                                <div class="book_info">
+                                    <em >20.국역 경덕궁수리소의 궤</em>
+                                    <span >김우진 역</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book3.do" alt="서울 의료사">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울 의료사</em>
+                                    <span >여인석 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book4.do" alt="서울 주둔 미 제7사단 정보보고서">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울 주둔 미 제7사단 정보보고서</em>
+                                    <span >한봉석 외(역)</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book5" alt="서울길에서 만나는 인물史">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울길에서 만나는 인물史</em>
+                                    <span >이상배 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book6" alt="서울과 역사 제113호">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울과 역사 제113호</em>
+                                    <span >박종서 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book7.do" alt="서울 동의 역사 (강북구) 1">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울 동의 역사 (강북구)1</em>
+                                    <span >정요근 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book8.do" alt="서울은 지금 공사중">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울은 지금 공사중</em>
+                                    <span >박만석(구술자) 외</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/sliderImg/book6" alt="서울의 대중가요">
+                                </a>
+                                <div class="book_info">
+                                    <em >서울의 대중가요</em>
+                                    <span >이영미</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section id="section03">
+            <div class="inner_wrap">
+                <h2 class="sub_title">공지사항
+                    <a href="#" class="more_view">전체보기</a>
+                </h2>
+                <ul class="notice_list">
+                    <li>
+                        <div class="date">
+                            <em class="red">23</em>
+                            <p  class="year">2024.02</p>
+                        </div>
+                        <div class="notice_link">
+                            <p class="notice_status">일반</p>
+                            <a href="#">물품입찰공고[서울 동의 역사(강서구, 양천구) 편집인쇄]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">
+                            <em class="red">28</em>
+                            <p  class="year">2024.02</p>
+                        </div>
+                        <div class="notice_link">
+                            <p class="notice_status">보도자료</p>
+                            <a href="#">영원을 꿈꾸며 돌에 글을 새기다. 서울역사편찬원, `돌에 새긴 서울사(史)` 발간</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">
+                            <em class="red">29</em>
+                            <p  class="year">2024.01</p>
+                        </div>
+                        <div class="notice_link">
+                            <p class="notice_status">일반</p>
+                            <a href="#">설 연휴 기간 서울역사편찬원 누리집(홈페이지) 서비스 중단 안내</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">
+                            <em class="red">30</em>
+                            <p  class="year">2024.01</p>
+                        </div>
+                        <div class="notice_link">
+                            <p class="notice_status">보도자료</p>
+                            <a href="#">돌에 새겨진 서울의 역사와 의미를 찾아가요.  서울역사편찬원 돌에 새긴 서울사 강좌 수강생 모집</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="section04">
+            <div class="swiper tabslide">
+                <div class="swiper-wrapper">
+                    <div id="program1" class="swiper-slide tab_slide" title="강좌탭" style="background-image: url(./img/sliderImg/section1_bg); ">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>강좌</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는
+                                <br>
+                                <em>다양한 프로그램</em>을 운영중입니다.
+                                <br>
+                                <a href="#" class="more_view">
+                                    프로그램 전체보기
+                                </a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab_con1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">모집마감</span>
+                                                <span class="type type2">일반강좌</span>
+                                                <h3>
+                                                    <a href="javascript:;">2024년 상반기 서울역사강좌 모집 안내</a>
+                                                </h3>    
+                                                <p class="content_text">안녕하십니까. 서울역사편찬원에서는 서울의 역사와 문화에 대한 폭넓은 이해를 돕고자 시민들을 대상으로 서울역사강좌를 운영하...</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span>2024-01-29 ~ 2024-02-18</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span>2024-03-08 ~ 2024-05-10</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper_nextBtn"></div>
+                                            <div class="swiper_prevBtn"></div>
+                                            <div class="swiper_pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="program2" class="swiper-slide tab_slide" title="답사탭" style="background-image: url(./img/sliderImg/section4_bg); ">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>답사</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는
+                                <br>
+                                <em>다양한 프로그램</em>을 운영중입니다.
+                                <br>
+                                <a href="javascript:;" class="more_view">
+                                    프로그램 전체보기
+                                </a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab_con2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type2">일반답사</span>
+                                                <h3>
+                                                    <a href="javascript:;">2024년 서울역사문화답사 안내(전체 일정 및 코스 등)</a>
+                                                </h3>    
+                                                <p class="content_text">안녕하세요. 서울역사편찬원에서는 매해 시민들에게 서울의 역사와 문화를 소개하고 그 이해를 높이고자 역사학자와 함께하는...</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span>2024-03-01 ~ 2024-11-30</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type2">일반답사</span>
+                                                <h3>
+                                                    <a href="javascript:;">3월 서울역사문화답사 신청 안내</a>
+                                                </h3>    
+                                                <p class="content_text">2024년 3월 서울역사답사 안내
+                                                    ○답사일시: 2024년 3월 23일(토) 13시~17시
+                                                    
+                                                    ○답사주제: 동부 서울의 교통 요충지, 동대문...
+                                                </p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span>2024-03-06 ~ 2024-03-15</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span>2024-03-23 ~ 2024-03-23</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper_nextBtn"></div>
+                                            <div class="swiper_prevBtn"></div>
+                                            <div class="swiper_pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="program3" class="swiper-slide tab_slide" title="공모탭" style="background-image: url(./img/sliderImg/section3_bg); ">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>공모</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는
+                                <br>
+                                <em>다양한 프로그램</em>을 운영중입니다.
+                                <br>
+                                <a href="javascript:;" class="more_view">
+                                    프로그램 전체보기
+                                </a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab_con3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">사료</span>
+                                                <span class="type type2">결과</span>
+                                                <h3>
+                                                    <a href="javascript:;">2024년 서울사료총서 번역팀 선정 결과 공고</a>
+                                                </h3>    
+                                                <p class="content_text">서울역사편찬원 공고 제2024-07호 
+                                                    2024년 서울사료총서 번역팀 선정 결과 공고 
+                                                   서울역사편찬원 공고 제2024-02호 &lt;2024년 서..
+                                                </p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span> ~ 2024-03-01</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span> ~ 2024-02-01</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">구술</span>
+                                                <span class="type type2">모집</span>
+                                                <h3>
+                                                    <a href="javascript:;">[재공고] 2024년도 서울역사구술채록사업 면담책임자 선정 공고(2차)</a>
+                                                </h3>    
+                                                <p class="content_text">서울역사편찬원 공고 제    2024-6호에 의하여 2024년도 서울역사구술채록사업 면담책임자를 공개모집을 아래와 같이...
+                                                </p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span>2024-02-19 ~ 2024-03-12</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">저술</span>
+                                                <span class="type type2">결과</span>
+                                                <h3>
+                                                    <a href="javascript:;">2024년도 《내고향 서울》 연구집필자 선정결과 안내</a>
+                                                </h3>    
+                                                <p class="content_text">서울역사편찬원 공고 제2024-5호 2024년도 《내고향 서울》 연구집필자 선정 결과 안내 2024년도 《내고향 서울》연구...
+                                                </p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·모집</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>·일시</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper_nextBtn"></div>
+                                            <div class="swiper_prevBtn"></div>
+                                            <div class="swiper_pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="program4" class="swiper-slide tab_slide" title="논문탭" style="background-image: url(./img/sliderImg/section2_bg); ">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>논문</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는
+                                <br>
+                                <em>다양한 프로그램</em>을 운영중입니다.
+                                <br>
+                                <a href="javascript:;" class="more_view">
+                                    프로그램 전체보기
+                                </a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab_con4">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">논문투고</span>
+                                                <h3>
+                                                    <a href="javascript:;">2024년 상반기 서울역사강좌 모집 안내</a>
+                                                </h3>    
+                                                <p class="content_text">『  서울과 역사  』  는 서울을 중심으로 전개된 역사적 사실을 조사 · 규명 ,  분석 · 논증하여  
+                                                    서울의 역사...</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·일정</em>
+                                                        <span>2023-12-31</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">논문투고</span>
+                                                <h3>
+                                                    <a href="javascript:;">서울과 역사 115호 논문 투고 안내</a>
+                                                </h3>    
+                                                <p class="content_text">『서울과 역사』는 서울을 중심으로 전개된 역사적 사실을 조사·규명, 분석·논증하여 서울의 역사 정체성을 학계...</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·일정</em>
+                                                        <span>2023-08-31</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 545px;">
+                                            <div class="contents_type">
+                                                <span class="type type1">연구발표회</span>
+                                                <h3>
+                                                    <a href="javascript:;">제32회 서울과 역사 개최 연구발표회 안내</a>
+                                                </h3> 
+                                                <p class="content_text">서울역사편찬원에서는 서울 역사와 문화에 대한 최신 연구를 학자와 시민에게 소개하기 위해 연구발표회를 개최하고 있습니다....</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>·일정</em>
+                                                        <span>2023-05-16</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper_nextBtn"></div>
+                                            <div class="swiper_prevBtn"></div>
+                                            <div class="swiper_pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="tap_pagination"></div>
+                <button class="swiper_pauseBtn"></button>
+            </div>
+        </section>
+        <section id="section05">
+            <div class="inner_wrap">
+                <div class="special_lecture">
+                    <h2 class="sub_title">온라인특강
+                        <a href="javascript:;" class="more_view">전체보기</a>
+                    </h2>
+                    <div class="lecture_box">
+                        <ul>
+                            <li>
+                                <div class="lecture_video">
+                                    <a href="https://youtu.be/ThQrRLELCzs" target="_blank">
+                                        <img src="./img/lecture01.jpg" alt="빛을 잃은 궁궐, 경복궁">
+                                        <div class="play-icon">
+                                            <img src="./img/icon/video_play.jpg" alt="재생">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lecture_info">
+                                    <a href="https://youtu.be/ThQrRLELCzs" target="_blank">
+                                        <em class="text_row2">빛을 잃은 궁궐, 경복궁</em>
+                                        <span class="text_row3"> 서울역사편찬원 온라인 답사 대신답사해드림이 궁궐도시, 서울이라는 주제로 서울의 공간을 답사합니다.조선의 5대 궁궐 중 하나인 경희궁! 하지만 옛 모습이 거의 남아있지 않아서, 경희궁 답사는 상상력...                                       
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lecture_video">
+                                    <a href="https://youtu.be/_5Zqn3NaoN0" target="_blank">
+                                        <img src="./img/lecture02.jpg" alt="광복 이후 일어난 대학교육의 붐">
+                                        <div class="play-icon">
+                                            <img src="./img/icon/video_play.jpg" alt="재생">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lecture_info">
+                                    <a href="https://youtu.be/ThQrRLELCzs" target="_blank">
+                                        <em class="text_row2">광복 이후 일어난 대학교육의 붐</em>
+                                        <span class="text_row3"> 서울을 특징짓는 중요한 요소인 고등교육기관, 대학이 서울에 밀집하게 된 역사적 배경과 2호선 대학을 가자는 구호에서 알 수 있듯이 서울의 도시발전과 연계되는 사회상을 전해 드립니다.                                       
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup_zone">
+                    <h2 class="sub_title">팝업존</h2>
+                    <div class="popup_wrap">
+                        <div class="popup_img">
+                            <img src="./img/popup_zone01.do" alt="2024년 역사달력 받아가세요">
+                        </div>
+                        <button class="popup-btn">모아보기&#43;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section06">
+            <div class="inner_wrap">
+                <div class="sub_title">서울역사편찬원</div>
+                <div class="sns_list">
+                    <div class="swiper snsWrap_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns1.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns2.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns3.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns3.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns4.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns5.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns6.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns7.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns9.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns10.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns11.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns12.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns13.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns14.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns15.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide sns_item">
+                                <div class="sns_media">
+                                    <div class="social_icon">
+                                        <img src="./img/icon/instagram.png" alt="인스타그램 아이콘">
+                                    </div>
+                                    <div class="feed_img">
+                                        <img class="mimg" src="./img/sns16.jpg" alt="">
+                                    </div>
+                                    <span class="layer_icon">
+                                        <span class="material-symbols-outlined">stacks</span>    
+                                    </span>
+                                    <div class="sns_overlay">
+                                        <a class="center_icon">
+                                            <i class="fas fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_left">
+                                        <h3>historyseoul</h3>
+                                        <span>14일전</span>
+                                        <div class="taglive">
+                                            <i class="far fa-heart taglive_icon">58</i>
+                                            <i class="far fa-comment-alt taglive_icon">0</i>
+                                        </div>
+                                    </div>
+                                    <div class="media_text">❄️ 서울역사편찬원 설경 ❄️<br><br>밤사이 내린 눈으로 뒤덮인 서울역사편찬원 설경을 전합니다.<br><br>편찬원 건물 앞뒤로 제설작업을 완료했으니,<br><br>언제든 안심하고 찾아주세요!<br><br>#서울역사편...
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="controller_wrap">
+                            <div>
+                                <div class="swiper_next">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </div>
+                                <div class="swiper_prev">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </div>
+                                <div class="swiper_pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="inner_wrap">
+            <div class="footer_top">
+                <img src="./img/icon/footer_logo.png" alt="하단로고">
+                <div class="familySite_wrap">
+                    <article id="family_Site" class="cont_select">
+                        <button class="btn_select">패밀리사이트</button>
+                        <ul class="familyList">
+                            <li><a href="javascript:;">서울역사박물관</a></li>
+                            <li><a href="javascript:;">한성백제박물관</a></li>
+                            <li><a href="javascript:;">동북아역사재단</a></li>
+                            <li><a href="javascript:;">규장각한국학연구원</a></li>
+                            <li><a href="javascript:;">한국학중앙연구원</a></li>
+                            <li><a href="javascript:;">한국고전번역원</a></li>
+                            <li><a href="javascript:;">국사편찬위원회</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <ul class="footerList">
+                    <li><a href="javascript:;">개인정보처리방침</a></li>
+                    <li><a href="javascript:;">영상정보처리기기 운영방침</a></li>
+                    <li><a href="javascript:;">사이트맵</a></li>
+                </ul>
+                <div class="footer_cont">
+                    <div class="footer_cont_left">
+                        <div>
+                            <address>05540 서울특별시 송파구 올림픽로 424</address>
+                            <span>이메일  history@seoul.go.kr</span>
+                            <span>전화번호</span>
+                            <span>자료협조 02-420-1255</span>
+                            <span>강좌답사 02-420-1257~1258</span>
+                            <span>일반문의 02-420-1256</span>
+                            <span>팩스 04-413-9636</span>
+                        </div>
+                        <p>Copyright © Seoul Historiography Institute. All Rights Reserved</p>
+                    </div>
+                    <div class="footer_cont_right">
+                        <div class="seoul_box"><a href="javascript:;"></a><img src="./img/icon/footer1.png" alt="해치와 소울프렌드"></div>
+                        <div class="wa_mark"><a href="javascript:;"><img src="./img/icon/wa_mark.png" alt="웹 접근성"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="top" href="#">TOP</a>
+    <div class="common_popup">
+        <div class="modal_header">
+            <h3>모아보기</h3>
+            <button class="modal_close">
+                <img src="./img/icon/close.svg" alt="닫기">
+            </button>
+        </div>
+        <div class="modal_content">
+            <div class="inner_wrap">
+                <ul>
+                    <li><a href="javascript:;"></a><img src="./img/popup_zone01.do" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
